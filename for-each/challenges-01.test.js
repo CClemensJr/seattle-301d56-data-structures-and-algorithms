@@ -126,7 +126,13 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  const outputArr = [];
+
+  arr.forEach((number) => (number % 5 === 0 && number % 3 === 0) ? (outputArr.push("Fizz Buzz")) : 
+                          (number % 5 === 0) ? (outputArr.push("Buzz")) : 
+                          (number % 3 === 0) ? outputArr.push("Fizz") : outputArr.push(number));
+
+  return outputArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
