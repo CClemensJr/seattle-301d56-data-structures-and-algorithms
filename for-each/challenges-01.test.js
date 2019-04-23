@@ -81,7 +81,9 @@ This anonymous function should accept up to three arguments: the element, the in
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithAnon = (arr) => {
-  // Solution code here...
+  arr.forEach((element, index, arr) => (element % 3 === 2) ? arr.pop() : console.log("Not divisible"));
+
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
