@@ -53,10 +53,7 @@ Return the modified array.
 const removeOne = (num, arr) => (num % 3 === 2) ? arr.pop() : console.log("Not divisible");
 
 const removeElements = (arr, removeOne) => {
-  // Solution code here...
-  for (let i = 0; i < arr.length; i++) {
-    removeOne(arr[i], arr);
-  }
+  for (let i = 0; i < arr.length; i++) { removeOne(arr[i], arr); }
 
   return arr;
 };
@@ -67,8 +64,13 @@ CHALLENGE 4
 Write a function named removeWithForEach that produces the same output as challenge 3, but uses forEach.
 ------------------------------------------------------------------------------------------------ */
 
-const removeWithForEach = (arr, callback) => {
-  // Solution code here...
+const removeWithForEach = (arr, removeOne) => {
+  // arr.forEach((element) => removeOne(element, arr));
+  arr.forEach(function(element) {
+    removeOne(element, arr);
+  });
+
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
