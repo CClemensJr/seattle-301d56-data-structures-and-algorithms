@@ -65,10 +65,7 @@ Write a function named removeWithForEach that produces the same output as challe
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithForEach = (arr, removeOne) => {
-  // arr.forEach((element) => removeOne(element, arr));
-  arr.forEach(function(element) {
-    removeOne(element, arr);
-  });
+  arr.forEach((element) => removeOne(element, arr));
 
   return arr;
 };
