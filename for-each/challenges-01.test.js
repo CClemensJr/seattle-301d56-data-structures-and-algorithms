@@ -10,7 +10,7 @@ Then, write a function named speaker that takes in a string and a callback funct
 
 const greeting = (word) => word.toUpperCase();
 
-const speaker = (message, callback) => greeting(message);
+const speaker = (message, greeting) => greeting(message);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -28,12 +28,14 @@ Within the addNumbers function, invoke the callback function as many times as ne
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
-const addValues = (arr, value) => {
-  // Solution code here...
-};
+const addValues = (arr, value) => arr.push(value);
 
-const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+const addNumbers = (num, arr, times, addValues) => {
+  for (let i = 0; i < times; i++) {
+    addValues(arr, num);
+  }
+
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
