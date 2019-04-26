@@ -47,18 +47,7 @@ If the user enters any of these four inputs, return true. For any other input, r
 Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
-const matchMonth = (input) => {
-  let regex1 = /\bOct\b/g;
-  let regex2 = /\boct\b/g;
-  let regex3 = /\bOctober\b/g;
-  let regex4 = /\boctober\b/g;
-  
-  if (regex1.test(input) || regex2.test(input) || regex3.test(input) || regex4.test(input)) {
-    return true;
-  } else {
-    return false;
-  }
-};
+const matchMonth = (input) => ((/\bOct\b/g).test(input) || (/\boct\b/g).test(input) || (/\bOctober\b/g).test(input) || (/\boctober\b/g).test(input)) ? true : false;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
