@@ -33,9 +33,7 @@ CHALLENGE 3
 Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
 
-const citiesAtoJ = (arr) => {
-  // Solution code here...
-};
+const citiesAtoJ = (arr) => arr.test(/'\\b[A-J][a-z]+'/);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -50,7 +48,7 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -63,9 +61,7 @@ For example, if given the string "Hello, and have a wonderful day!", the word "H
 The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "a ", "wonderful "].
 ------------------------------------------------------------------------------------------------ */
 
-const noPunctuation = str => {
-  // Solution code here...
-};
+const noPunctuation = str => str.match(/\b\w+\b\s/g);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
