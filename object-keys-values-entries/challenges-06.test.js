@@ -109,7 +109,17 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  let hasKids;
+  
+  arr.forEach((person) => {
+    let personEntries = Object.entries(person);
+
+    if (personEntries[0][1] === character) {
+      (personEntries[2][1].length > 0) ? hasKids = true : hasKids = false;
+    }
+  });
+
+  return hasKids;
 };
 
 /* ------------------------------------------------------------------------------------------------
