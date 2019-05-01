@@ -65,7 +65,7 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
 const evenOdd = (arr) => {
-  // Solution code here...
+  arr.map((num) => (typeof(num) !== 'number' ? num = 'N/A' : (num % 2 === 0) ? num = 'even' : num = 'odd'));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -110,9 +110,7 @@ const snorlaxAbilities = {
   weight: 4600,
 };
 
-const extractAbilities = (arr) => {
-  // Solution code here...
-};
+const extractAbilities = (arr) => arr.map((snorlax) => snorlax.ability.name );
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
