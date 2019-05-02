@@ -83,9 +83,7 @@ Write a function named getStatName that is an extension of your getBaseStatGreat
 For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 'special-attack'].
 ------------------------------------------------------------------------------------------------ */
 
-const getStatName = (arr, minBaseStat) => {
-  // Solution code here...
-};
+const getStatName = (arr, minBaseStat) => arr.filter((obj) => (obj.baseStat > minBaseStat) ? obj.stat.name : console.log('The basestat was not greater'));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
