@@ -1,6 +1,8 @@
 
 'use strict';
 
+import { objectExpression } from "@babel/types";
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
@@ -133,7 +135,13 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
-  // Solution code here...
+  let names = data.filter((character) => {
+    if (character.gender === 'male' || character.gender === 'female') {
+      return character.name;
+    }
+  });
+
+  return names;
 };
 
 /* ------------------------------------------------------------------------------------------------
