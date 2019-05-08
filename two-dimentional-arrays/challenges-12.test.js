@@ -1,5 +1,7 @@
 'use strict';
 
+import { stringLiteral } from "@babel/types";
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
@@ -95,7 +97,7 @@ The top row of the board is considered row zero and row numbers increase as they
 ------------------------------------------------------------------------------------------------ */
 
 const battleship = (board, row, col) => {
-  //  Solution code here...
+  board.forEach(column => row.forEach(space => (column === space) ? "hit" : "miss"));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -107,7 +109,7 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
+  numbers.forEach( arr => arr.map(num => num = num *= arr[num + 1]));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -127,7 +129,12 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  // Solution code here...
+  let sum = 0;
+  weather.forEach(arr.forEach(num => sum += num));
+
+  let avg = sum / weather.length;
+
+  return avg;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -148,7 +155,12 @@ let lowestWeeklyTemperatureData = [
 ];
 
 const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
+  let sum = 0;
+  weather.forEach(arr => arr.forEach(num => sum += num), sum+= arr);
+
+  let avg = sum / weather[0].length;
+
+  return avg;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -163,9 +175,7 @@ The function should parse the string as rows and columns and compute the sum of 
 For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
-const excel = (str) => {
-  // Solution code here...
-};
+const excel = (str) => str.split('').toString();
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
