@@ -19,7 +19,11 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 ------------------------------------------------------------------------------------------------ */
 
 const findHappiness = (arr) => {
-  // Solution code here...
+  const smileyArr = [];
+
+  arr.forEach(str => (str.includes(':)')) ? smileyArr.push(str) : console.log('Not a smiley'));
+
+  return smileyArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
