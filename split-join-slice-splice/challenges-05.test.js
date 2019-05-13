@@ -113,7 +113,9 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 
 const stepActions = (recipe) => {
   let result = [];
-  // Solution code here...
+  
+  recipe.steps.forEach(action => result.push(action.split(' ')[0]));
+
   return result;
 };
 
@@ -131,7 +133,11 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  // Solution code here...
+  for(let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) arr.splice(i, 1);
+  }
+
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -149,9 +155,7 @@ removeLastCharacters('Gregor', -2) returns 'Gregor'
 removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
-const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
-};
+const removeLastCharacters = (str, numberOfCharacters) => (numberOfCharacters > str.length) ? '' : (numberOfCharacters < 0) ? str : str.slice(0, (str.length - numberOfCharacters));
 
 
 /* ------------------------------------------------------------------------------------------------
