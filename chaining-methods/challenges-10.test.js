@@ -1,7 +1,6 @@
 
 'use strict';
 
-import { objectExpression } from "@babel/types";
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
@@ -40,7 +39,7 @@ const totalSum = (input) => {
 
   input.filter((arr) => {
     arr.filter((num) => {
-      sum += num
+      sum += num;
     });
   });
 
@@ -62,7 +61,6 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 const divisibleByFiveTwoToThePower = (input) => {
   input.map((arr) => {
     arr.map((val) => {
-      // if (typeof(val)!== Number ||) {
       if (val % 5 !== 0) {
         return arr.shift();
       } else {
@@ -135,13 +133,9 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
-  let names = data.filter((character) => {
-    if (character.gender === 'male' || character.gender === 'female') {
-      return character.name;
-    }
-  });
+  let names = data.map((character) => (character.gender === 'male' || character.gender === 'female') ? `${ character.name } and` : null).filter((name) => name !== null);
 
-  return names;
+  return names.pop().toString('');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -153,9 +147,7 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 let findShortest = (data) => {
   let shortestName = data[0].name;
 
-  data.filter((character) => {
-    if (character.name.length < shortestName) shortestName = character.name.length;
-  });
+  data.filter((character) => (character.name.length <= shortestName.length) ? shortestName = character.name : null);
 
   return shortestName;
 };
