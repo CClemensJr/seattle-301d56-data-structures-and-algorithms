@@ -10,8 +10,14 @@ public class ArrayReverse {
   }
 
   public static int[] reverseArray(int[] inputArray) {
+    int length = inputArray.length;
+    int[] reverseArray = new int[length];
 
-    return new int[0];
+    for (int i = 0; i < length; i++) {
+      reverseArray[i] = inputArray[length -i - 1];
+    }
+
+    return reverseArray;
   }
     
 }
