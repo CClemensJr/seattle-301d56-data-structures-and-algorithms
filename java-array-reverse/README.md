@@ -1,11 +1,11 @@
 # Reverse an Array
-
+> Reversing an array of integers!
 
 ## Challenge
-<!-- Description of the challenge -->
+> Write a function called reverseArray which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+> For this challenge I used a for loop due to the simplicity involved. This resulted in an O(n) for time and space.
 
 ## Solution
-<!-- Embedded whiteboard image -->
+https://github.com/CClemensJr/seattle-301d56-data-structures-and-algorithms/raw/master/java-array-reverse/assets/array-reverse.png
